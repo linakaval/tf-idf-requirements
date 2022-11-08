@@ -66,6 +66,8 @@ with open(out_file, 'w') as outf:
             #df = pd.DataFrame(denselist, columns = feature_names)
             
             #print(df)
-        #### change to 4 if nfr is 4
-        output = "FR{0},{1},{2},{3},{4}".format(j+1, nfr_sim[0], nfr_sim[1], nfr_sim[2], nfr_sim[3])
+        if nfr_num == 3:
+            output = "FR{0},{1},{2},{3}".format(j+1, nfr_sim[0], nfr_sim[1], nfr_sim[2], nfr_sim[3])
+        elif nfr_num == 4:
+            output = "FR{0},{1},{2},{3},{4}".format(j+1, nfr_sim[0], nfr_sim[1], nfr_sim[2], nfr_sim[3])
         outf.write(output + '\n')   
